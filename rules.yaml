@@ -21,6 +21,9 @@ link_should_not_contain:
   - new-guild
   - newly-formed-guild
   - new-guild
+  - lfm
+  - lf-dps
+  - lf-raiders
   - 1m
   - 2m
   - 3m
