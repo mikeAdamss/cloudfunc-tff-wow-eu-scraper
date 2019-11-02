@@ -9,6 +9,8 @@ link_should_not_contain:
   - mythic raiding
   - delete
   - hardcore
+  - new-guild
+  - newly-formed-guild
 
 post_should_not_contain:
   - horde only
