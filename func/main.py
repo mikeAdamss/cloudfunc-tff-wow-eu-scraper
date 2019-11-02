@@ -6,10 +6,13 @@ except ImportError:
     except ImportError:
         from bs4 import BeautifulSoup
 
+from discord_webhook import DiscordWebhook
+
 import datetime
 import requests
 import yaml
 import re
+import os
 
 import dateutil.parser
 
@@ -82,6 +85,7 @@ def main(event, context):
             url_and_date_created.update({filtered_link: time_string})
 
     # now filter out anything more than an hour old
+    hook = os.getenv("DISCORD_RECRUITMENT_WEBHOOK")
     for url, time_string in url_and_date_created.items():
 
         time_created = dateutil.parser.parse(time_string)
@@ -92,4 +96,6 @@ def main(event, context):
 
         print(time_created, time_one_hour_ago)
         if time_created > time_one_hour_ago:
+            webhook = DiscordWebhook(url=hook, content=url)
+            webhook.execute()
             print(url)
