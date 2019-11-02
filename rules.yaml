@@ -16,7 +16,4 @@ link_should_not_contain:
   - horde: alliance
   - -h: -a
   - h: -a
-  
-post_should_not_contain:
-  - horde only
-  - noobs
+ 
