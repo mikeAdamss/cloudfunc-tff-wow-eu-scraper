@@ -24,13 +24,13 @@ link_should_not_contain:
   - lfm
   - lf-dps
   - lf-raiders
-  - 1m
-  - 2m
-  - 3m
-  - 4m
-  - 5m
-  - 6m
-  - 7m
-  - 8m
-  - 9m
-  - 10m
+  - "1m"
+  - "2m"
+  - "3m"
+  - "4m"
+  - "5m"
+  - "6m"
+  - "7m"
+  - "8m"
+  - "9m"
+  - "10m"
