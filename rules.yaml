@@ -12,6 +12,7 @@ link_should_not_contain:
   - hardcore
   - new-guild
   - newly-formed-guild
+  - new-guild
 
 post_should_not_contain:
   - horde only
