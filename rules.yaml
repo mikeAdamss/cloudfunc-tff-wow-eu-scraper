@@ -1,3 +1,14 @@
+link_should_not_begin_with:
+  - horde
+  - h
+  
+link_should_not_end_with:
+  - horde
+  - h
+  
+link_only_contain_key_with_value:
+  - horde: alliance
+  - h: a
 
 link_should_not_contain:
   - welcome-please-read-before-posting
@@ -11,4 +22,3 @@ link_should_not_contain:
   - newly-formed-guild
   - new-guild
   - alliance
-  - a-
