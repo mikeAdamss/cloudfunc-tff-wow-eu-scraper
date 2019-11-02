@@ -1,0 +1,13 @@
+
+link_should_not_start_with:
+  - h
+
+link_should_not_contain:
+  - welcome-please-read-before-posting
+  - bump posts
+  - recruiting
+  - mythic raiding
+
+post_should_not_contain:
+  - horde only
+  - noobs
