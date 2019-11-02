@@ -7,6 +7,8 @@ link_should_not_contain:
   - bump posts
   - recruiting
   - mythic raiding
+  - delete
+  - hardcore
 
 post_should_not_contain:
   - horde only
