@@ -1,5 +1,5 @@
 
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 
 import datetime
 import requests
