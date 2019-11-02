@@ -4,9 +4,10 @@ link_should_not_start_with:
 
 link_should_not_contain:
   - welcome-please-read-before-posting
-  - bump posts
+  - bump-posts
   - recruiting
-  - mythic raiding
+  - mythic-raiding
+  - mythic-guild
   - delete
   - hardcore
   - new-guild
