@@ -1,5 +1,10 @@
-
-from bs4 import BeautifulSoup
+try:
+    from BeautifulSoup import BeautifulSoup
+except ImportError:
+    try:
+        from beautifulsoup4 import BeautifulSoup
+    except ImportError
+        from bs4 import BeautifulSoup
 
 import datetime
 import requests
