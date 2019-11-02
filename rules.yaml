@@ -8,7 +8,7 @@ link_should_not_end_with:
   
 link_should_only_contain_key_with_value:
   - horde: alliance
-  - h: a
+  - -h-: -a-
 
 link_should_not_contain:
   - welcome-please-read-before-posting
