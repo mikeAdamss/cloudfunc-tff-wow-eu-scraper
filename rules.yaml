@@ -10,10 +10,5 @@ link_should_not_contain:
   - new-guild
   - newly-formed-guild
   - new-guild
-  
- # ignore horde posts but account for (horde or alliance) posts
- link_should_not_contain_first_without_second:
-  - horde: alliance
-  - -h: -a
-  - h: -a
- 
+  - alliance
+  - a-
