@@ -1,7 +1,4 @@
 
-link_should_not_start_with:
-  - h
-
 link_should_not_contain:
   - welcome-please-read-before-posting
   - bump-posts
@@ -13,7 +10,13 @@ link_should_not_contain:
   - new-guild
   - newly-formed-guild
   - new-guild
-
+  
+ # ignore horde posts but account for (horde or alliance) posts
+ link_should_not_contain_first_without_second:
+  - horde: alliance
+  - -h: -a
+  - h: -a
+  
 post_should_not_contain:
   - horde only
   - noobs
