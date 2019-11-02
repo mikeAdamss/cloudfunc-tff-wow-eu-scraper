@@ -1,8 +1,5 @@
 
-try:
-    from requests_html import HTMLSession
-except ImportError:
-    from requests-html import HTMLSession
+from requests_html import HTMLSession
     
 import datetime
 import requests
