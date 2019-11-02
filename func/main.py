@@ -1,6 +1,9 @@
 
-from requests_html import HTMLSession
-
+try:
+    from requests_html import HTMLSession
+except ImportError:
+    from requests-html import HTMLSession
+    
 import datetime
 import requests
 import yaml
