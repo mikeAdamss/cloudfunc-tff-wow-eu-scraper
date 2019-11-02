@@ -12,6 +12,7 @@ link_should_only_contain_key_with_value:
 
 link_should_not_contain:
   - welcome-please-read-before-posting
+  - please-do-not-bump-threads
   - bump-posts
   - recruiting
   - mythic-raiding
