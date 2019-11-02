@@ -3,7 +3,7 @@ try:
 except ImportError:
     try:
         from beautifulsoup4 import BeautifulSoup
-    except ImportError
+    except ImportError:
         from bs4 import BeautifulSoup
 
 import datetime
