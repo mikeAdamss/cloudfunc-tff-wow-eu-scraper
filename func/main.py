@@ -1,9 +1,10 @@
 
-from requests_html import HTMLSession
-    
+from bs4 import BeautifulSoup
+
 import datetime
 import requests
 import yaml
+import re
 
 import dateutil.parser
 
@@ -11,13 +12,12 @@ import dateutil.parser
 
 def main(event, context):
 
-    session = HTMLSession()
-    r = session.get('https://eu.forums.blizzard.com/en/wow/c/recruitment/guild-recruitment/')
+    r = requests.get('https://eu.forums.blizzard.com/en/wow/c/recruitment/guild-recruitment/')
 
-    link_boiler_plate = "https://eu.forums.blizzard.com/en/wow/t/"
+    soup = BeautifulSoup(r.content)
+    links = soup.findAll('a', attrs={'href': re.compile("^https://eu.forums.blizzard.com/en/wow/t/")})
 
-    links = r.html.absolute_links
-    links = [x.split("/")[-2] for x in links if x.startswith(link_boiler_plate)]
+    links = [x["href"].split("/")[-2] for x in links]
 
     r = requests.get("https://raw.githubusercontent.com/mikeAdamss/cloudfunc-tff-wow-eu-scraper/master/rules.yaml")
     rules = yaml.load(r.content)
@@ -51,7 +51,7 @@ def main(event, context):
                         keep = False
 
         if keep:
-            filtered_links.append(link_boiler_plate + l)
+            filtered_links.append("https://eu.forums.blizzard.com/en/wow/t/" + l)
 
     # go through and find the creation time for each url
     url_and_date_created = {}
