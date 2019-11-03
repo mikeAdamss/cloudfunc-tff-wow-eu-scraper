@@ -1,10 +1,10 @@
 link_should_not_begin_with:
   - horde
-  - h
+  - h-
   
 link_should_not_end_with:
   - horde
-  - h
+  - -h
   
 link_should_only_contain_key_with_value:
   - horde: alliance
