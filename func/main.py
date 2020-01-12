@@ -81,7 +81,7 @@ def main(event, context):
             print("failed on", filtered_link)
         else:
 
-            time_string = line.split("<time datetime=\\'")[1].split("\\")[0]
+            time_string = line.split("<time itemprop='datePublished' datetime='")[1].split("'")[0]
             url_and_date_created.update({filtered_link: time_string})
 
     # now filter out anything more than an hour old
