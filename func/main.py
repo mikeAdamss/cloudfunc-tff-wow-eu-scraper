@@ -84,6 +84,8 @@ def main(event, context):
             line = str(rfl.content).split("\\n")[choice]
             print(line)
 
+            # For debugging
+            print("1st timesplit is:", line.split("<time itemprop=\\'datePublished\\' datetime=\\'"))
             time_string = line.split("<time itemprop=\\'datePublished\\' datetime=\\'")[1].split("\'")[0]
             url_and_date_created.update({filtered_link: time_string})
 
