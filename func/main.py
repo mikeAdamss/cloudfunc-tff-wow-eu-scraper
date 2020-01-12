@@ -73,7 +73,7 @@ def main(event, context):
         lines = str(rfl.content).split("\\n")
         for i, line in enumerate(lines):
 
-            if "datePublished" in line:
+            if "class=\\'post-time\\'" in line:
                 print("With url", filtered_link)
                 print("Found line:", line)
                 choice = i
