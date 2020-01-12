@@ -74,12 +74,14 @@ def main(event, context):
         for i, line in enumerate(lines):
 
             if "datePublished" in line:
-                choice = i+1
+                choice = i
                 break
 
         if choice == "":
             print("failed on", filtered_link)
         else:
+
+            line = str(rfl.content).split("\\n")[choice]
 
             time_string = line.split("<time itemprop='datePublished' datetime='")[1].split("'")[0]
             url_and_date_created.update({filtered_link: time_string})
