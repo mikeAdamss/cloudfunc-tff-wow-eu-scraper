@@ -74,6 +74,7 @@ def main(event, context):
         for i, line in enumerate(lines):
 
             if "datePublished" in line:
+                print("With url", filtered_link)
                 print("Found line:", line)
                 choice = i
                 break
